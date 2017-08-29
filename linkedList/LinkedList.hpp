@@ -36,14 +36,26 @@ int LinkedList<T>::size() const
 template <typename T>
 bool LinkedList<T>::search(T value) const
 {
-	Node<T>* temp = m_front;
-	bool isFound = false;
 
-	/** TODO 
-		Fix this method
-	*/
+      if(isEmpty())
+	{
+	return(false);
+	}
+	else{
+      Node<T>* jumper= m_front;
+  
+      for(int i=0; i<m_size; i++)
+      {
+	 if (jumper->getValue()==value){
+	return(true);
+	}
+	else{	
+         jumper=jumper->getNext();
+      }
+ }}
+      return(false);
 
-	return(isFound);
+
 }
 
 template <typename T>
